@@ -20,7 +20,7 @@ public class ToDoController {
         this.toDoService = toDoService;
     }
 
-    @GetMapping("/todos")
+    @GetMapping("/todo")
     public String showTodos(Model model) {
         List<ToDo> todos = toDoService.getAllToDos(); // サービスから取得
         model.addAttribute("todos", todos);           // ★ thymeleaf に渡す
